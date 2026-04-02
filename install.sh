@@ -119,7 +119,7 @@ echo ""
 echo -e "${C_BLUE}Step 1: Choose Color Theme${C_RESET}"
 themes=("gray" "orange" "blue" "teal" "green" "lavender" "rose" "gold" "slate" "cyan")
 theme_idx=$(ask_choice "Select your preferred color theme:" "${themes[@]}")
-SELECTED_THEME="${themes[$theme_idx]}"
+SELECTED_THEME="${themes[$theme_idx]:-blue}"
 print_success "Selected theme: $SELECTED_THEME"
 
 # Module selection
